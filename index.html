@@ -1,0 +1,2171 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Марина & Кирилл | 05.09.2026</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+--rose:#f7f1f1;
+--rose-dark:#f1e5e5;
+--gold:#d7b98a;
+--text:#2d2d2d;
+--white:#fffdfc;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Montserrat',sans-serif;
+background:var(--rose);
+color:var(--text);
+overflow-x:hidden;
+}
+
+section{
+padding:120px 20px;
+}
+
+.container{
+max-width:1200px;
+margin:auto;
+}
+
+.title{
+font-family:'Cormorant Garamond',serif;
+font-size:4rem;
+font-weight:500;
+text-align:center;
+margin-bottom:25px;
+}
+
+.subtitle{
+text-align:center;
+max-width:700px;
+margin:auto;
+line-height:1.8;
+color:#666;
+}
+
+.divider{
+width:80px;
+height:1px;
+background:var(--gold);
+margin:25px auto 40px;
+}
+
+.hero{
+height:100vh;
+position:relative;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:white;
+overflow:hidden;
+}
+
+.hero::before{
+content:'';
+position:absolute;
+inset:0;
+
+background:
+linear-gradient(
+rgba(0,0,0,.40),
+rgba(0,0,0,.50)
+),
+url('images/hero.jpg') center/cover no-repeat;
+
+z-index:1;
+}
+
+.hero-content{
+position:relative;
+z-index:2;
+padding:20px;
+}
+
+.hero-date{
+font-size:.8rem;
+letter-spacing:5px;
+}
+
+.hero h1{
+font-family:'Cormorant Garamond',serif;
+font-size:5rem;
+font-weight:500;
+line-height:.95;
+}
+
+.hero h2{
+font-weight:300;
+letter-spacing:4px;
+margin-top:20px;
+}
+
+.hero-text{
+margin-top:30px;
+font-size:1rem;
+line-height:1.8;
+}
+
+.hero-btn{
+display:inline-block;
+margin-top:50px;
+padding:15px 35px;
+
+border:1px solid rgba(255,255,255,.4);
+
+color:white;
+text-decoration:none;
+
+backdrop-filter:blur(10px);
+
+border-radius:50px;
+
+transition:.3s;
+}
+
+.hero-btn:hover{
+background:white;
+color:#333;
+}
+
+.scroll-down{
+position:absolute;
+bottom:30px;
+left:50%;
+transform:translateX(-50%);
+z-index:2;
+font-size:.9rem;
+letter-spacing:2px;
+}
+
+.calendar{
+background:var(--white);
+}
+
+.calendar-card{
+max-width:700px;
+margin:auto;
+
+background:white;
+
+padding:70px 40px;
+
+border-radius:30px;
+
+box-shadow:
+0 15px 50px rgba(0,0,0,.05);
+}
+
+.month{
+text-align:center;
+letter-spacing:5px;
+margin-bottom:30px;
+color:#888;
+}
+
+.calendar-grid{
+display:grid;
+grid-template-columns:repeat(7,1fr);
+gap:12px;
+
+max-width:500px;
+margin:40px auto;
+}
+
+.calendar-grid div{
+text-align:center;
+padding:10px;
+}
+
+.kirill-photo{
+object-position:left center;
+filter:contrast(1.05);
+}
+.wedding-day{
+
+background:var(--gold);
+
+color:white;
+
+border-radius:50%;
+
+width:55px;
+height:55px;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+margin:auto;
+
+font-weight:600;
+}
+
+.calendar-date{
+text-align:center;
+margin-top:40px;
+}
+
+.calendar-date h3{
+font-family:'Cormorant Garamond',serif;
+font-size:3rem;
+font-weight:500;
+}
+
+.calendar-date p{
+margin-top:10px;
+color:#777;
+}
+.childhood{
+background:#fffdfc;
+}
+
+.kids-wrapper{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:50px;
+margin-top:50px;
+flex-wrap:wrap;
+}
+
+.kid-card{
+text-align:center;
+}
+
+.kid-card img{
+width:280px;
+height:360px;
+object-fit:cover;
+
+border-radius:30px;
+
+box-shadow:
+0 15px 40px rgba(0,0,0,.08);
+
+transition:.4s;
+}
+
+.kid-card img:hover{
+transform:translateY(-8px);
+}
+
+.kid-card h3{
+margin-top:20px;
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:2rem;
+font-weight:500;
+}
+
+.heart-divider{
+font-size:4rem;
+color:var(--gold);
+font-family:'Cormorant Garamond',serif;
+}
+
+.child-text{
+max-width:700px;
+
+margin:60px auto 0;
+
+text-align:center;
+
+line-height:2;
+
+font-size:1.1rem;
+
+color:#666;
+}
+.gallery-story{
+background:#fffaf9;
+}
+
+.gallery-large{
+margin:70px auto;
+text-align:center;
+}
+
+.gallery-large img{
+width:auto;
+max-width:500px;
+max-height:700px;
+
+border-radius:35px;
+
+display:block;
+margin:auto;
+
+box-shadow:
+0 20px 60px rgba(0,0,0,.08);
+}
+
+.gallery-large p{
+margin-top:25px;
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:2rem;
+
+color:#444;
+}
+
+.gallery-two{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+
+margin:70px 0;
+}
+
+.gallery-item img{
+width:100%;
+max-width:450px;
+height:auto;
+
+display:block;
+margin:auto;
+
+border-radius:30px;
+
+box-shadow:
+0 15px 45px rgba(0,0,0,.08);
+}
+
+.gallery-item img:hover{
+transform:translateY(-8px);
+}
+
+.gallery-item p{
+margin-top:20px;
+
+text-align:center;
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:1.6rem;
+}
+.love-story{
+background:#fffaf9;
+}
+
+.story-slider{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:30px;
+
+margin-top:50px;
+}
+
+.slide-content{
+text-align:center;
+}
+
+.slide-content img{
+max-width:450px;
+width:100%;
+
+max-height:700px;
+
+border-radius:35px;
+
+box-shadow:
+0 20px 60px rgba(0,0,0,.08);
+
+transition:.4s;
+}
+
+.slide-content h3{
+margin-top:25px;
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:2rem;
+
+font-weight:500;
+}
+
+.slide-btn{
+width:60px;
+height:60px;
+
+border:none;
+
+border-radius:50%;
+
+background:#d7b98a;
+
+color:white;
+
+font-size:1.8rem;
+
+cursor:pointer;
+
+transition:.3s;
+}
+
+.slide-btn:hover{
+transform:scale(1.08);
+}
+
+.slider-dots{
+margin-top:30px;
+
+display:flex;
+justify-content:center;
+gap:12px;
+}
+
+.dot{
+width:10px;
+height:10px;
+
+border-radius:50%;
+
+background:#d7c8b0;
+}
+
+.dot.active{
+background:#b58b57;
+}
+.love-quote{
+padding:140px 20px;
+background:#fff6f8;
+}
+
+.quote-card{
+
+max-width:900px;
+
+margin:auto;
+
+text-align:center;
+
+padding:80px 60px;
+
+border-radius:40px;
+
+background:white;
+
+box-shadow:
+0 20px 60px rgba(0,0,0,.05);
+}
+
+.quote-mark{
+
+font-size:5rem;
+
+color:#d7b98a;
+
+line-height:1;
+}
+
+.quote-card p{
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:2.4rem;
+
+line-height:1.6;
+
+margin:30px 0;
+}
+
+.quote-sign{
+
+letter-spacing:4px;
+
+text-transform:uppercase;
+
+color:#b58b57;
+
+font-size:.9rem;
+}
+.timeline{
+background:#fffdfc;
+}
+
+.timeline-wrap{
+max-width:800px;
+margin:auto;
+position:relative;
+}
+
+.timeline-wrap::before{
+
+content:'';
+
+position:absolute;
+
+left:150px;
+top:0;
+bottom:0;
+
+width:1px;
+
+background:#d7b98a;
+}
+
+.timeline-item{
+
+display:flex;
+
+gap:60px;
+
+margin-bottom:70px;
+
+position:relative;
+}
+.timeline-item::before{
+
+content:'';
+
+position:absolute;
+
+left:142px;
+top:20px;
+
+width:16px;
+height:16px;
+
+border-radius:50%;
+
+background:#d7b98a;
+
+border:4px solid #fffaf9;
+
+box-shadow:
+0 0 0 3px rgba(215,185,138,.2);
+}
+
+.timeline-time{
+
+min-width:100px;
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:2rem;
+
+color:#b58b57;
+
+text-align:right;
+}
+
+.timeline-content{
+
+background:white;
+
+padding:30px;
+
+border-radius:25px;
+
+box-shadow:
+0 10px 30px rgba(0,0,0,.04);
+
+flex:1;
+}
+
+.timeline-content h3{
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:2rem;
+
+margin-bottom:10px;
+}
+
+.timeline-content p{
+
+color:#666;
+
+line-height:1.8;
+}
+@media(max-width:768px){
+
+    .gallery-two{
+grid-template-columns:1fr;
+}
+.story-slider{
+gap:10px;
+}
+.timeline-wrap::before{
+display:none;
+}
+
+.timeline-item{
+flex-direction:column;
+gap:15px;
+}
+
+.timeline-time{
+text-align:left;
+}
+
+.timeline-content{
+padding:25px;
+}
+.slide-btn{
+width:45px;
+height:45px;
+font-size:1.3rem;
+}
+
+.slide-content img{
+max-width:90vw;
+}
+.gallery-item img{
+height:420px;
+}
+
+.gallery-large p{
+font-size:1.6rem;
+}
+.calendar-card{
+padding:35px 12px;
+}
+
+.calendar-grid{
+max-width:100%;
+gap:4px;
+font-size:.8rem;
+}
+
+.calendar-grid div{
+padding:4px;
+}
+
+.wedding-day{
+width:38px;
+height:38px;
+font-size:.9rem;
+}
+.hero h1{
+font-size:2.3rem;
+line-height:1;
+}
+
+.kid-card img{
+width:240px;
+height:300px;
+}
+
+.slide-btn{
+width:40px;
+height:40px;
+font-size:1.1rem;
+}
+.kids-wrapper{
+flex-direction:column;
+gap:30px;
+}
+
+.heart-divider{
+font-size:3rem;
+}
+.childhood{
+padding-top:80px;
+}
+.music-btn{
+top:20px;
+right:20px;
+width:50px;
+height:50px;
+font-size:20px;
+}
+.slide-btn{
+position:relative;
+z-index:5;
+}
+.footer-love h2{
+font-size:3rem;
+}
+}
+@media(max-width:768px){
+
+.title{
+font-size:3rem;
+}
+
+}
+
+.calendar-card{
+padding:50px 20px;
+}
+.location{
+background:#fff6f8;
+}
+
+.location-card{
+
+max-width:700px;
+
+margin:auto;
+
+padding:80px 50px;
+
+background:white;
+
+border-radius:40px;
+
+text-align:center;
+
+box-shadow:
+0 20px 60px rgba(0,0,0,.05);
+}
+
+.location-icon{
+
+font-size:3rem;
+
+color:#d7b98a;
+
+margin-bottom:20px;
+}
+
+.location-name{
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:2.4rem;
+
+margin-bottom:15px;
+}
+
+.location-address{
+
+font-size:1.15rem;
+
+line-height:1.8;
+
+color:#666;
+
+margin-bottom:25px;
+}
+
+.location-date{
+
+letter-spacing:3px;
+
+text-transform:uppercase;
+
+color:#b58b57;
+
+margin-bottom:35px;
+}
+
+.location-btn{
+
+display:inline-block;
+
+padding:18px 42px;
+
+border-radius:50px;
+
+text-decoration:none;
+
+background:
+linear-gradient(
+135deg,
+#d8c2a5,
+#c6a37c
+);
+
+color:white;
+
+font-weight:600;
+
+transition:.3s;
+}
+
+.location-btn:hover{
+
+transform:translateY(-3px);
+
+box-shadow:
+0 10px 30px rgba(198,163,124,.35);
+}
+.wishes{
+padding:120px 0;
+}
+
+.wish-grid{
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(280px,1fr));
+
+gap:30px;
+
+margin-top:60px;
+}
+
+.wish-card{
+
+background:white;
+
+padding:45px 35px;
+
+border-radius:32px;
+
+text-align:center;
+
+box-shadow:
+0 15px 50px rgba(0,0,0,.05);
+
+transition:.3s;
+}
+
+.wish-card:hover{
+
+transform:translateY(-6px);
+}
+
+.wish-icon{
+
+font-size:2.5rem;
+
+color:#d7b98a;
+
+margin-bottom:20px;
+}
+
+.wish-card h3{
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:2rem;
+
+margin-bottom:15px;
+}
+
+.wish-card p{
+
+line-height:1.9;
+
+color:#666;
+}
+.wish-grid{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:30px;
+}
+
+.wish-card{
+width:320px;
+}
+.telegram-section{
+padding:120px 20px;
+text-align:center;
+}
+
+.telegram-text{
+max-width:700px;
+margin:0 auto 40px;
+color:#777;
+line-height:1.8;
+}
+
+.telegram-card{
+background:#fff;
+max-width:500px;
+margin:auto;
+padding:50px;
+border-radius:30px;
+box-shadow:0 20px 60px rgba(0,0,0,.06);
+}
+
+.telegram-qr{
+width:240px;
+border-radius:20px;
+margin-bottom:30px;
+}
+
+.telegram-btn{
+display:inline-block;
+padding:16px 36px;
+background:#d8b98c;
+color:white;
+text-decoration:none;
+border-radius:50px;
+transition:.3s;
+}
+
+.telegram-btn:hover{
+transform:translateY(-3px);
+}
+.rsvp-section{
+padding:120px 20px;
+text-align:center;
+}
+
+.rsvp-text{
+margin-bottom:40px;
+color:#777;
+}
+
+.rsvp-form{
+max-width:600px;
+margin:auto;
+display:flex;
+flex-direction:column;
+gap:20px;
+}
+
+.rsvp-form input,
+.rsvp-form select,
+.rsvp-form textarea{
+padding:18px 20px;
+border:none;
+border-radius:20px;
+background:#fff;
+font-size:16px;
+font-family:inherit;
+box-shadow:0 10px 30px rgba(0,0,0,.05);
+}
+
+.rsvp-form textarea{
+resize:none;
+}
+
+.rsvp-form button{
+padding:18px;
+border:none;
+border-radius:50px;
+background:#d8b98c;
+color:white;
+font-size:16px;
+cursor:pointer;
+transition:.3s;
+}
+
+.rsvp-form button:hover{
+transform:translateY(-3px);
+}
+.drink-block{
+background:#fff;
+padding:25px;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,.05);
+text-align:left;
+}
+
+.drink-block h4{
+margin-bottom:15px;
+font-weight:500;
+color:#2d2d2d;
+}
+
+.drink-block label{
+display:block;
+margin:10px 0;
+cursor:pointer;
+color:#666;
+}
+
+.drink-block input{
+margin-right:10px;
+}
+.footer-love{
+
+padding:140px 20px;
+
+text-align:center;
+
+background:
+linear-gradient(
+180deg,
+#fff8f8,
+#f5ecec
+);
+}
+
+.footer-date{
+
+letter-spacing:6px;
+
+color:#b58b57;
+
+margin-bottom:30px;
+}
+
+.footer-love h2{
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:5rem;
+
+font-weight:500;
+
+margin-bottom:20px;
+}
+
+.footer-heart{
+
+font-size:3rem;
+
+color:#d7b98a;
+
+margin-bottom:30px;
+}
+
+.footer-love p{
+
+font-size:1.15rem;
+
+line-height:1.8;
+
+color:#666;
+}
+
+.footer-small{
+
+margin-top:15px;
+
+font-style:italic;
+
+color:#999;
+}
+.music-btn{
+position:fixed;
+
+top:25px;
+right:25px;
+
+width:58px;
+height:58px;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+border:none;
+border-radius:50%;
+
+background:linear-gradient(
+45deg,
+#d7b98a,
+#b58b57
+);
+
+color:white;
+font-size:24px;
+
+cursor:pointer;
+
+box-shadow:
+0 10px 25px rgba(181,139,87,.35);
+
+z-index:9999;
+
+transition:.3s;
+}
+
+.music-btn:hover{
+transform:scale(1.08);
+}
+
+.music-btn.playing{
+animation:pulseMusic 2s infinite;
+}
+
+@keyframes pulseMusic{
+
+0%{
+box-shadow:0 0 0 0 rgba(181,139,87,.5);
+}
+
+70%{
+box-shadow:0 0 0 15px rgba(181,139,87,0);
+}
+
+100%{
+box-shadow:0 0 0 0 rgba(181,139,87,0);
+}
+
+}
+/* Заставка */
+
+#preloader{
+
+position:fixed;
+
+inset:0;
+
+background:#f7f1f1;
+
+display:flex;
+
+align-items:center;
+justify-content:center;
+
+z-index:99999;
+
+transition:opacity 1.2s ease;
+}
+
+.preloader-content{
+
+text-align:center;
+}
+
+.preloader-text{
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:2.5rem;
+
+color:#2d2d2d;
+
+margin-bottom:25px;
+}
+
+.preloader-heart{
+
+font-size:4rem;
+
+color:#d7b98a;
+
+animation:heartPulse 1.5s infinite;
+
+margin-bottom:25px;
+}
+
+.preloader-date{
+
+letter-spacing:6px;
+
+color:#b58b57;
+
+font-size:.95rem;
+}
+
+@keyframes heartPulse{
+
+0%{
+transform:scale(1);
+opacity:.7;
+}
+
+50%{
+transform:scale(1.15);
+opacity:1;
+}
+
+100%{
+transform:scale(1);
+opacity:.7;
+}
+
+}
+
+.preloader-hide{
+
+opacity:0;
+pointer-events:none;
+}
+.fade-section{
+opacity:0;
+transform:translateY(60px);
+transition:
+opacity 1.1s ease,
+transform 1.1s ease;
+will-change:transform,opacity;
+}
+
+.fade-section.show{
+opacity:1;
+transform:translateY(0);
+}
+.success-modal{
+
+position:fixed;
+inset:0;
+
+background:rgba(0,0,0,.35);
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+opacity:0;
+visibility:hidden;
+
+transition:.4s;
+
+z-index:99999;
+}
+
+.success-modal.show{
+
+opacity:1;
+visibility:visible;
+}
+
+.success-card{
+
+background:white;
+
+padding:50px 40px;
+
+border-radius:35px;
+
+max-width:450px;
+width:90%;
+
+text-align:center;
+
+box-shadow:
+0 20px 60px rgba(0,0,0,.15);
+
+animation:modalAppear .5s ease;
+}
+
+.success-heart{
+
+font-size:3rem;
+
+color:#d7b98a;
+
+margin-bottom:20px;
+}
+
+.success-card h3{
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:3rem;
+
+font-weight:500;
+
+margin-bottom:15px;
+}
+
+.success-card p{
+
+line-height:1.8;
+
+color:#666;
+}
+
+.success-sign{
+
+margin-top:25px;
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:2rem;
+
+color:#b58b57;
+}
+
+@keyframes modalAppear{
+
+from{
+
+transform:translateY(20px);
+opacity:0;
+
+}
+
+to{
+
+transform:translateY(0);
+opacity:1;
+
+}
+
+}
+</style>
+
+</head>
+<script>
+
+window.addEventListener('load',()=>{
+
+    setTimeout(()=>{
+
+        const preloader =
+        document.getElementById('preloader');
+
+        preloader.classList.add('preloader-hide');
+
+        setTimeout(()=>{
+
+            preloader.remove();
+
+        },1200);
+
+    },1800);
+
+});
+
+</script>
+<body>
+<div id="preloader">
+
+    <div class="preloader-content">
+
+        <div class="preloader-text">
+            Совсем скоро мы скажем друг другу «Да»
+        </div>
+
+        <div class="preloader-heart">
+            ♡
+        </div>
+
+        <div class="preloader-date">
+            05 • 09 • 2026
+        </div>
+
+    </div>
+
+</div>
+<section class="hero">
+
+<div class="hero-content">
+
+<div class="hero-date">
+05 • 09 • 2026
+</div>
+
+<h1>
+Марина<br>
+&<br>
+Кирилл
+</h1>
+
+<h2>
+МЫ ЖЕНИМСЯ
+</h2>
+
+<p class="hero-text">
+С любовью приглашаем вас<br>
+разделить этот день вместе с нами
+</p>
+
+<a href="#calendar" class="hero-btn">
+День нашей свадьбы
+</a>
+
+</div>
+
+<div class="scroll-down">
+Листайте вниз
+</div>
+
+</section>
+
+<section id="calendar" class="calendar fade-section">
+
+<div class="container">
+
+<div class="calendar-card">
+
+<h2 class="title">
+Сохраните эту дату
+</h2>
+
+<div class="divider"></div>
+
+<div class="month">
+СЕНТЯБРЬ 2026
+</div>
+
+<div class="calendar-grid">
+
+<div>ПН</div>
+<div>ВТ</div>
+<div>СР</div>
+<div>ЧТ</div>
+<div>ПТ</div>
+<div>СБ</div>
+<div>ВС</div>
+
+<div></div>
+<div>1</div>
+<div>2</div>
+<div>3</div>
+<div>4</div>
+
+<div class="wedding-day">
+05
+</div>
+
+<div>6</div>
+
+</div>
+
+<div class="calendar-date">
+
+<h3>
+Суббота
+</h3>
+
+<p>
+05 сентября 2026
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="childhood fade-section">
+
+<div class="container">
+
+<h2 class="title">
+Узнаёте этих карапузов?
+</h2>
+
+<div class="divider"></div>
+
+<div class="kids-wrapper">
+
+<div class="kid-card">
+
+<img src="images/marina-child.jpg" alt="Марина">
+
+<h3>Марина</h3>
+
+</div>
+
+<div class="heart-divider">
+♡
+</div>
+
+<div class="kid-card">
+
+<img src="images/kirill-child.jpg"
+     alt="Кирилл"
+     class="kirill-photo">
+
+<h3>Кирилл</h3>
+
+</div>
+
+</div>
+
+<div class="child-text">
+
+Когда-то мы были просто детьми.<br><br>
+
+И даже не подозревали,
+что однажды встретим друг друга
+и станем семьёй.
+
+</div>
+
+</div>
+
+</section>
+<section class="love-story fade-section">
+
+<div class="container">
+
+<h2 class="title">
+Наша история
+</h2>
+
+<div class="divider"></div>
+
+<div class="story-slider">
+
+<button class="slide-btn prev">
+❮
+</button>
+
+<div class="slide-content">
+
+<img id="storyImage"
+src="images/gallery1.jpg"
+alt="">
+
+<h3 id="storyTitle">
+Наше первое совместное фото
+</h3>
+
+</div>
+
+<button class="slide-btn next">
+❯
+</button>
+
+</div>
+
+<div class="slider-dots">
+
+<span class="dot active"></span>
+<span class="dot"></span>
+<span class="dot"></span>
+<span class="dot"></span>
+<span class="dot"></span>
+<span class="dot"></span>
+
+</div>
+
+</div>
+
+</section>
+<section class="love-quote fade-section">
+
+<div class="container">
+
+<div class="quote-card">
+
+<div class="quote-mark">❝</div>
+
+<p>
+
+Счастье —
+это когда счастье другого человека
+становится важнее собственного.
+
+</p>
+
+<div class="quote-sign">
+
+Марина & Кирилл
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+<section class="timeline fade-section">
+
+<div class="container">
+
+<h2 class="title">
+Тайминг дня
+</h2>
+
+<div class="divider"></div>
+
+<div class="timeline-wrap">
+
+<div class="timeline-item">
+
+<div class="timeline-time">
+16:00
+</div>
+
+<div class="timeline-content">
+
+<h3>Сбор гостей</h3>
+
+<p>
+Время тёплых встреч,
+объятий и первых фотографий
+</p>
+
+</div>
+
+</div>
+
+<div class="timeline-item">
+
+<div class="timeline-time">
+16:30
+</div>
+
+<div class="timeline-content">
+
+<h3>Церемония</h3>
+
+<p>
+Самый трогательный момент нашего дня
+</p>
+
+</div>
+
+</div>
+
+<div class="timeline-item">
+
+<div class="timeline-time">
+17:00
+</div>
+
+<div class="timeline-content">
+
+<h3>Банкет</h3>
+
+<p>
+Вкусная еда,
+приятные разговоры и веселье
+</p>
+
+</div>
+
+</div>
+
+<div class="timeline-item">
+
+<div class="timeline-time">
+23:00
+</div>
+
+<div class="timeline-content">
+
+<h3>Завершение вечера</h3>
+
+<p>
+Пусть этот день останется
+в памяти надолго
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+<section id="location" class="location fade-section">
+
+<div class="container">
+
+<h2 class="title">
+Место проведения
+</h2>
+
+<div class="divider"></div>
+
+<div class="location-card">
+
+<div class="location-icon">
+✦
+</div>
+
+<div class="location-name">
+Банкетный зал «Ренессанс»
+</div>
+
+<div class="location-address">
+Туполевское ш., 1/3<br>
+Жуковский
+</div>
+
+<div class="location-date">
+05 сентября 2026
+</div>
+
+<a href="https://yandex.ru/maps/org/renessans/114396563100/?ll=38.123620%2C55.586289&z=15"
+target="_blank"
+class="location-btn">
+
+Построить маршрут
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+<section id="wishes" class="wishes fade-section">
+
+<div class="container">
+
+<h2 class="title">
+Наши пожелания
+</h2>
+
+<div class="divider"></div>
+
+<div class="wish-grid">
+
+<div class="wish-card">
+
+<div class="wish-icon">
+♡
+</div>
+
+<h3>
+Подарки
+</h3>
+
+<p>
+Мы будем рады подаркам в денежном формате, которые помогут нам сделать первые шаги 
+в нашей семейной жизни и воплотить в реальность самые важные мечты
+</p>
+
+</div>
+
+<div class="wish-card">
+
+<div class="wish-icon">
+✿
+</div>
+
+<h3>
+Цветы
+</h3>
+
+<p>
+Приятным комплиментом для нас будет, если
+вместо цветов вы решите подарить нам бутылочку вашего любимого напитка с пожеланием, когда её открыть
+</p>
+
+</div>
+
+<div class="wish-card">
+
+<div class="wish-icon">
+☾
+</div>
+
+<h3>
+Дети
+</h3>
+
+<p>
+Мы очень любим ваших малышей.
+Но формат нашего праздника рассчитан на взрослых гостей.
+Надеемся на ваше понимание
+</p>
+</div>
+  
+
+<div class="wish-card dress-code-card">
+
+<div class="wish-icon">
+✦
+</div>
+
+<h3>
+Дресс-код
+</h3>
+
+<p>
+Для нашего праздника нет строгого дресс-кода.
+
+Выбирайте наряд, в котором будете чувствовать себя красиво, комфортно и сможете наслаждаться этим днём вместе с нами.
+</p>
+
+</div> <!-- dress-code-card -->
+
+</div> <!-- wish-grid -->
+
+</div> <!-- container -->
+
+
+</section>
+<section class="rsvp-section fade-section">
+
+    <div class="container">
+
+        <h2 class="title">
+            Подтвердите присутствие
+        </h2>
+
+        <div class="divider"></div>
+
+        <p class="rsvp-text">
+            Пожалуйста, сообщите нам о своём решении до 01 августа 2026 года.
+        </p>
+
+        <form class="rsvp-form">
+
+            <input
+                type="text"
+                placeholder="Ваше имя и фамилия"
+                required
+            >
+
+            <select required>
+                <option value="">
+                    Сможете присутствовать?
+                </option>
+                <option>
+                    С удовольствием приду 
+                </option>
+                <option>
+                    К сожалению, не смогу
+                </option>
+            </select>
+
+<div class="drink-block">
+
+    <h4>Какие напитки вы предпочитаете?</h4>
+
+  <label><input type="checkbox" name="drink" value="Игристое / шампанское"> Игристое / шампанское</label>
+
+<label><input type="checkbox" name="drink" value="Белое вино"> Белое вино</label>
+
+<label><input type="checkbox" name="drink" value="Красное вино"> Красное вино</label>
+
+<label><input type="checkbox" name="drink" value="Коньяк"> Коньяк</label>
+
+<label><input type="checkbox" name="drink" value="Виски"> Виски</label>
+
+<label><input type="checkbox" name="drink" value="Водка"> Водка</label>
+
+<label><input type="checkbox" name="drink" value="Безалкогольные напитки"> Безалкогольные напитки</label>
+</div>
+            <textarea
+                rows="4"
+                placeholder="Пожелания, комментарии или вопросы"
+            ></textarea>
+
+            <button type="submit">
+                Отправить ответ
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+<section class="telegram-section fade-section">
+
+
+    <div class="container">
+
+        <h2 class="title">
+            Чат гостей
+        </h2>
+
+        <div class="divider"></div>
+
+        <p class="telegram-text">
+            После подтверждения присутствия приглашаем вас присоединиться к чату гостей.
+Здесь мы будем делиться организационной информацией, а после свадьбы соберём самые тёплые фотографии и видео нашего дня
+        </p>
+
+        <div class="telegram-card">
+
+            <img
+                src="images/telegram-qr.jpg"
+                alt="Telegram"
+                class="telegram-qr"
+            >
+
+            <a
+                href="https://t.me/+iepbLRf-lbw3ZDAy"
+                target="_blank"
+                class="telegram-btn"
+            >
+                Вступить в чат гостей
+            </a>
+
+        </div>
+
+    </div>
+    </section>
+<script>
+
+const slides = [
+
+{
+image:'images/gallery1.jpg',
+title:'Наше первое совместное фото'
+},
+
+{
+image:'images/gallery2.jpg',
+title:'Первый Новый год вместе'
+},
+
+{
+image:'images/gallery3.jpg',
+title:'Первое путешествие'
+},
+
+{
+image:'images/gallery4.jpg',
+title:'Поездка в Калининград'
+},
+
+{
+image:'images/gallery5.jpg',
+title:'Наш первый дом'
+},
+
+{
+image:'images/gallery6.jpg',
+title:'Тот самый день'
+}
+
+];
+
+let currentSlide = 0;
+
+const image =
+document.getElementById('storyImage');
+
+const title =
+document.getElementById('storyTitle');
+
+const dots =
+document.querySelectorAll('.dot');
+
+function updateSlide(){
+
+image.src =
+slides[currentSlide].image;
+
+title.textContent =
+slides[currentSlide].title;
+
+dots.forEach(dot =>
+dot.classList.remove('active'));
+
+dots[currentSlide]
+.classList.add('active');
+}
+
+document
+.querySelector('.next')
+.addEventListener('click',()=>{
+
+currentSlide++;
+
+if(currentSlide >= slides.length)
+currentSlide = 0;
+
+updateSlide();
+
+});
+
+document
+.querySelector('.prev')
+.addEventListener('click',()=>{
+
+currentSlide--;
+
+if(currentSlide < 0)
+currentSlide = slides.length - 1;
+
+updateSlide();
+
+});
+
+</script>
+<section class="footer-love fade-section">
+
+    <div class="container">
+
+        <div class="footer-date">
+            05 • 09 • 2026
+        </div>
+
+        <h2>
+            Марина & Кирилл
+        </h2>
+
+        <div class="footer-heart">
+            ♡
+        </div>
+
+        <p>
+            Спасибо, что разделите этот день вместе с нами.
+        </p>
+
+        <p class="footer-small">
+            С любовью ждём встречи на нашей свадьбе
+        </p>
+
+    </div>
+
+</section>
+<div id="successModal" class="success-modal">
+
+    <div class="success-card">
+
+        <div class="success-heart">
+            ♡
+        </div>
+
+        <h3>
+            Спасибо!
+        </h3>
+
+        <p>
+            Ваш ответ успешно отправлен.
+            <br><br>
+            Мы будем рады разделить этот день 
+            вместе с вами.
+        </p>
+
+       <div class="success-sign">
+    Марина & Кирилл
+</div>
+
+</div>
+</div>
+
+<audio id="bgMusic" loop>
+    <source src="music/music.mp3" type="audio/mpeg">
+</audio>
+
+<button id="musicBtn" class="music-btn">
+♪
+</button>
+<script>
+
+const music=document.getElementById('bgMusic');
+const musicBtn=document.getElementById('musicBtn');
+
+let isPlaying=false;
+
+musicBtn.addEventListener('click',()=>{
+
+if(!isPlaying){
+
+music.volume=0.4;
+music.play();
+
+musicBtn.classList.add('playing');
+musicBtn.innerHTML='❚❚';
+
+isPlaying=true;
+
+}else{
+
+music.pause();
+
+musicBtn.classList.remove('playing');
+musicBtn.innerHTML='♪';
+
+isPlaying=false;
+
+}
+
+});
+
+</script>
+<script>
+
+const WEB_APP_URL =
+"https://script.google.com/macros/s/AKfycbwA4hghbCEeKdz7zxFFnt9dBEwHNv2fapgsQkphxlLm4IHLHV2NnZtpyYv2MlNXCsR8kw/exec";
+
+document.querySelector(".rsvp-form")
+.addEventListener("submit", async function(e){
+
+e.preventDefault();
+const drinks = [...document.querySelectorAll('input[name="drink"]:checked')]
+.map(el => el.value)
+.join(', ');
+const data = {
+
+name:
+this.querySelector('input[type="text"]').value,
+
+attendance:
+this.querySelector('select').value,
+drinks: drinks,
+comment:
+this.querySelector('textarea').value
+
+};
+try{
+
+await fetch(WEB_APP_URL,{
+method:"POST",
+body:JSON.stringify(data)
+});
+
+document
+.getElementById('successModal')
+.classList.add('show');
+
+setTimeout(()=>{
+
+document
+.getElementById('successModal')
+.classList.remove('show');
+
+},5000);
+
+this.reset();
+
+}catch(error){
+
+alert(
+"Ошибка отправки. Попробуйте позже."
+);
+
+}
+
+});
+
+</script>
+<script>
+
+const observer =
+new IntersectionObserver((entries)=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.classList.add('show');
+
+}
+
+});
+
+
+},{
+threshold:0.15
+});
+
+document
+.querySelectorAll('.fade-section')
+.forEach(section=>{
+
+observer.observe(section);
+
+});
+
+</script>
+<script>
+
+const successModal =
+document.getElementById('successModal');
+
+successModal.addEventListener('click', function(e){
+
+    if(e.target === this){
+
+        this.classList.remove('show');
+
+    }
+
+});
+
+</script>
+
+</body>
+</html>
