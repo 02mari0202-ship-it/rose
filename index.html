@@ -660,7 +660,7 @@ height:38px;
 font-size:.9rem;
 }
 .hero-content{
-transform:translateY(-120px);
+transform:translateY(-90px);
 }
 
 .hero h1{
@@ -702,18 +702,47 @@ font-size:20px;
 display:none;
 }
 .footer-love h2{
-font-size:2.3rem;
+font-size:2rem;
 line-height:1.1;
 }
 .hero h2{
 display:none;
 }
-
+.hero-btn{
+margin-top:100px;
+}
+.hero h1{
+font-size:2.6rem;
+line-height:1.1;
+}
 }
 @media(max-width:768px){
 
 .title{
 font-size:3rem;
+}
+.timeline-wrap::before{
+display:none;
+}
+
+.timeline-item{
+flex-direction:column;
+gap:15px;
+align-items:center;
+text-align:center;
+}
+
+.timeline-time{
+text-align:center;
+}
+
+.timeline-item::before{
+left:50%;
+transform:translateX(-50%);
+}
+
+.timeline-content{
+width:100%;
 }
 
 }
@@ -1386,11 +1415,8 @@ window.addEventListener('load',()=>{
 </div>
 
 <h1>
-Марина<br>
-&<br>
-Кирилл
+Марина & Кирилл
 </h1>
-
 <h2>
 МЫ ЖЕНИМСЯ
 </h2>
@@ -1643,7 +1669,7 @@ alt="">
 
 <div class="timeline-content">
 
-<h3>Церемония</h3>
+<h3>Церемония бракосочетания</h3>
 
 <p>
 Самый трогательный момент нашего дня
@@ -1778,8 +1804,9 @@ class="location-btn">
 </h3>
 
 <p>
-Приятным комплиментом для нас будет, если
-вместо цветов вы решите подарить нам бутылочку вашего любимого напитка с пожеланием, когда её открыть
+Пожалуйста, не дарите нам цветы. Мы не успеем насладиться их красотой до отъезда в свадебное путешествие.
+Приятным комплиментом для нас будет, если вместо цветов вы решите подарить нам 
+бутылочку вашего любимого напитка с пожеланием, когда её открыть
 </p>
 
 </div>
@@ -1873,7 +1900,7 @@ class="location-btn">
 <label><input type="checkbox" name="drink" value="Коньяк"> Коньяк</label>
 
 <label><input type="checkbox" name="drink" value="Виски"> Виски</label>
-
+<label><input type="checkbox" name="drink" value="Ром"> Ром</label>
 <label><input type="checkbox" name="drink" value="Водка"> Водка</label>
 
 <label><input type="checkbox" name="drink" value="Безалкогольные напитки"> Безалкогольные напитки</label>
