@@ -660,14 +660,16 @@ height:38px;
 font-size:.9rem;
 }
 .hero-content{
-transform:translateY(-110px);
+transform:translateY(-120px);
 }
 
 .hero h1{
 font-size:2.3rem;
 line-height:1;
 }
-
+.hero{
+background-position:center 25%;
+}
 .kid-card img{
 width:240px;
 height:300px;
@@ -703,7 +705,7 @@ display:none;
 font-size:2.3rem;
 line-height:1.1;
 }
-.hero-subtitle{
+.hero h2{
 display:none;
 }
 
@@ -1305,6 +1307,31 @@ opacity:1;
 }
 
 }
+.countdown{
+margin-top:40px;
+text-align:center;
+}
+
+.countdown-title{
+color:#888;
+margin-bottom:15px;
+letter-spacing:2px;
+}
+
+.countdown-timer{
+font-family:'Cormorant Garamond',serif;
+font-size:2.5rem;
+color:#b58b57;
+font-weight:500;
+}
+
+@media(max-width:768px){
+
+.countdown-timer{
+font-size:2rem;
+}
+
+}
 </style>
 
 </head>
@@ -1436,7 +1463,17 @@ window.addEventListener('load',()=>{
 </p>
 
 </div>
+<div class="countdown">
 
+    <div class="countdown-title">
+        До нашей свадьбы осталось
+    </div>
+
+    <div id="countdownTimer" class="countdown-timer">
+        ...
+    </div>
+
+</div>
 </div>
 
 </div>
@@ -1811,7 +1848,7 @@ class="location-btn">
                 required
             >
 
-            <select required>
+           <select required id="attendanceSelect">
                 <option value="">
                     Сможете присутствовать?
                 </option>
@@ -1823,7 +1860,7 @@ class="location-btn">
                 </option>
             </select>
 
-<div class="drink-block">
+<div class="drink-block" id="drinkBlock">
 
     <h4>Какие напитки вы предпочитаете?</h4>
 
@@ -2116,6 +2153,33 @@ isPlaying=false;
 </script>
 <script>
 
+const attendanceSelect =
+document.getElementById('attendanceSelect');
+
+const drinkBlock =
+document.getElementById('drinkBlock');
+
+attendanceSelect.addEventListener('change', function(){
+
+    if(this.value.includes('не смогу')){
+
+        document
+        .querySelectorAll('input[name="drink"]')
+        .forEach(el => el.checked = false);
+
+        drinkBlock.style.display = 'none';
+
+    }else{
+
+        drinkBlock.style.display = 'block';
+
+    }
+
+});
+
+</script>
+<script>
+
 const WEB_APP_URL =
 "https://script.google.com/macros/s/AKfycbwA4hghbCEeKdz7zxFFnt9dBEwHNv2fapgsQkphxlLm4IHLHV2NnZtpyYv2MlNXCsR8kw/exec";
 
@@ -2144,7 +2208,29 @@ await fetch(WEB_APP_URL,{
 method:"POST",
 body:JSON.stringify(data)
 });
+const attendance =
+this.querySelector('select').value;
 
+const modalText =
+document.querySelector('.success-card p');
+
+if(attendance.includes('не смогу')){
+
+modalText.innerHTML = `
+Очень жаль, что у вас не получится быть с нами в этот день.
+<br><br>
+Спасибо, что сообщили нам о своём решении.
+`;
+
+}else{
+
+modalText.innerHTML = `
+Ваш ответ успешно отправлен.
+<br><br>
+Мы будем рады разделить этот день вместе с вами.
+`;
+
+}
 document
 .getElementById('successModal')
 .classList.add('show');
@@ -2158,7 +2244,7 @@ document
 },5000);
 
 this.reset();
-
+drinkBlock.style.display = 'block';
 }catch(error){
 
 alert(
@@ -2215,6 +2301,56 @@ successModal.addEventListener('click', function(e){
 });
 
 </script>
+<script>
 
+const weddingDate =
+new Date("2026-09-05T16:00:00");
+
+function updateCountdown(){
+
+    const now = new Date();
+
+    const diff =
+    weddingDate - now;
+
+    if(diff <= 0){
+
+        document.getElementById(
+        'countdownTimer'
+        ).innerHTML = "Этот день настал ❤️";
+
+        return;
+    }
+
+    const days =
+    Math.floor(diff / (1000 * 60 * 60 * 24));
+
+    const hours =
+    Math.floor(
+    (diff % (1000 * 60 * 60 * 24))
+    / (1000 * 60 * 60)
+    );
+
+    const minutes =
+    Math.floor(
+    (diff % (1000 * 60 * 60))
+    / (1000 * 60)
+    );
+
+    document.getElementById(
+    'countdownTimer'
+    ).innerHTML =
+    `${days} дн. ${hours} ч. ${minutes} мин.`;
+
+}
+
+updateCountdown();
+
+setInterval(
+updateCountdown,
+60000
+);
+
+</script>
 </body>
 </html>
